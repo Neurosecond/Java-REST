@@ -21,6 +21,8 @@ public class Client implements Serializable {
     @Column(name = "formId")
     private Form formId;
 
+    //@toString
+
     //arg-constructor to initialize fields
     public Client(Integer clientId, String clientName, String clientTitle, String clientAddress, Form formId)
     {
@@ -32,6 +34,7 @@ public class Client implements Serializable {
     }
 
     //getter and setter methods
+
     public Integer getClientId() { return clientId; }
 
     public void setClientId(Integer clientId) {

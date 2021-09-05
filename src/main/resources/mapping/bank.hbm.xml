@@ -1,0 +1,14 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC
+        "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+        "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+
+<hibernate-mapping package="com.sample.domain">
+
+    <class name="Bank" table="bank">
+        <id name="bankId" column="bankId"><generator class="increment"/></id>
+        <property name="bankName" unique="true" column="bankName"/>
+        <property name="bankIdCode" unique="true" column="bankIdCode" not-null="true" />
+    </class>
+
+</hibernate-mapping>

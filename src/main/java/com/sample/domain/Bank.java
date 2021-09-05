@@ -17,6 +17,8 @@ public class Bank implements Serializable {
     @Column(name = "bankIdCode")
     private Integer bankIdCode;
 
+    //@toString
+
     //arg-constructor to initialize fields
     public Bank(Integer bankId, String bankName, Integer bankIdCode)
     {

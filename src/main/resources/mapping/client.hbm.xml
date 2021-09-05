@@ -1,0 +1,18 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC
+        "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+        "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+
+<hibernate-mapping package="com.sample.domain">
+
+    <class name="Client" table="client">
+        <id name="clientId" column="clientId"><generator class="increment"/></id>
+        <property name="clientName" column="clientName" type="string"/>
+        <property name="clientTitle" unique="true" column="clientTitle" type="string"/>
+        <property name="clientAddress" column="clientAddress" not-null="true" type="string"/>
+        <many-to-one name="formId" class="Form" fetch="select">
+            <column name="formId" not-null="true" />
+        </many-to-one>
+    </class>
+
+</hibernate-mapping>

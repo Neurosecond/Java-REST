@@ -1,0 +1,23 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC
+        "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+        "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+
+<hibernate-mapping package="com.sample.domain">
+
+    <class name="Deposit" table="deposit">
+        <id name="depositId" column="depositId"><generator class="increment"/></id>
+        <set name="clientId" table="client" inverse="true" lazy="true" fetch="select">
+            <key><column name="clientId" not-null="true" /></key>
+            <one-to-many class="Client" />
+        </set>
+        <set name="bankId" table="bank" inverse="true" lazy="true" fetch="select">
+            <key><column name="bankId" not-null="true" /></key>
+            <one-to-many class="Bank" />
+        </set>
+        <property name="depositOpen" column="depositOpen"/>
+        <property name="depositRate" column="depositRate"/>
+        <property name="depositClose" column="depositClose"/>
+    </class>
+
+</hibernate-mapping>

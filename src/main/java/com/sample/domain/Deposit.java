@@ -4,9 +4,9 @@ import java.io.Serializable;
 import java.time.LocalDate;
 import javax.persistence.*;
 
-/** Created for test purpose by a.buchkevich 09/2021
- *  Deposit POJO class to represent entity Deposit */
-@Entity
+/** Created for test purpose by a.buchkevich@gmail.com 09/2021
+ *  Deposit class to represent entity Deposit */
+@Entity    // нужно ли маркировать столько сущностей ??
 @Table(name = "deposit")
 public class Deposit implements Serializable {
     @Id
@@ -24,10 +24,12 @@ public class Deposit implements Serializable {
     @Column(name = "depositClose")
     private LocalDate depositClose;
 
+    //@toString
+
     //arg-constructor to initialize fields
     public Deposit(Integer depositId, Client clientId, Bank bankId, LocalDate depositOpen, Double depositRate, LocalDate depositClose)
     {
-        this.depositId = depositId; // нужен метод добавления DepositId автоматически
+        this.depositId = depositId;
         this.clientId = clientId;
         this.bankId = bankId;
         this.depositOpen = depositOpen;
@@ -36,6 +38,7 @@ public class Deposit implements Serializable {
     }
 
     //getter and setter methods
+
     public Integer getDepositId() { return depositId; }
 
     public void setDepositId(Integer depositId) {

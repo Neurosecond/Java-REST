@@ -4,13 +4,12 @@ import java.io.Serializable;
 import javax.persistence.*;
 
 @Entity
-@Table(name = "form")
 public class Form implements Serializable {
     @Id
-    @Column(name = "formId")
+    @Column
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Integer formId;
-    @Column(name = "organizationForm")
+    @Column
     private String organizationForm;
 
     //arg-constructor to initialize fields
