@@ -1,4 +1,4 @@
-package com.sample.restapispring.bootjpa;
+package com.sample.boot;
 
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;

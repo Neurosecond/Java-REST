@@ -1,4 +1,4 @@
-package com.sample.restapispring.bootjpa;
+package com.sample.boot;
 
 import org.hibernate.HibernateException;
 import org.hibernate.Session;

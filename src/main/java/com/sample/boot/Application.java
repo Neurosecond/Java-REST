@@ -1,4 +1,4 @@
-package com.sample.restapispring.bootjpa;
+package com.sample.boot;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;

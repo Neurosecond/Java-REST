@@ -1,7 +1,7 @@
 # Read Me First
 The following was discovered as part of building this project:
 
-* The original package name 'com.sample.rest-api-spring+boot-jpa' is invalid and this project uses 'com.sample.restapispring.bootjpa' instead.
+* The original package name 'com.sample.rest-api-spring+boot-jpa' is invalid and this project uses 'com.sample.restapi.bootjpa' instead.
 
 # Getting Started
 
