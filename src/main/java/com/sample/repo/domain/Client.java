@@ -1,6 +1,7 @@
-package com.sample.domain;
+package com.sample.repo.domain;
 
 import java.io.Serializable;
+import java.util.ArrayList;
 import javax.persistence.*;
 
 /** Created for test purpose by a.buchkevich@gmail.com 09/2021
@@ -19,7 +20,8 @@ public class Client implements Serializable {
     @Column(name = "clientAddress")
     private String clientAddress;
     @Column(name = "formId")
-    private Form formId;
+    @OneToMany // or @JoinColumn
+    private ArrayList<Form> clientForm = new ArrayList<>();
 
     //@toString
 
@@ -29,8 +31,8 @@ public class Client implements Serializable {
         this.clientId = clientId; // с учетом генератора
         this.clientName = clientName;
         this.clientTitle = clientTitle;
-        this.clientAddress =clientAddress;
-        this.formId = formId;
+        this.clientAddress = clientAddress;
+        this.clientForm = clientForm;
     }
 
     //getter and setter methods
@@ -59,9 +61,4 @@ public class Client implements Serializable {
         this.clientAddress = clientAddress;
     }
 
-    public Form getFormId() { return formId; }
-
-    public void setFormId(Form formId) {
-        this.formId = formId;
-    }
 }

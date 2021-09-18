@@ -1,4 +1,4 @@
-package com.sample.domain;
+package com.sample.repo.domain;
 
 import java.io.Serializable;
 import java.time.LocalDate;
